@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @list.title %>
+</p>
+
+<p>
+  <strong>Descrição:</strong>
+  <%= @list.description %>
+</p>
+
+<div id="lists_item_wrapper">
+ <%= render @list.lists_item %>
+ <div id="form">
+  <%= render "lists_item/form" %>
+ </div>
+</div>
+
+<%= link_to 'Editar', edit_list_path(@list) %> |
+<%= link_to 'Voltar', lists_path %>
